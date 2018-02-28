@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180227234521) do
+ActiveRecord::Schema.define(version: 20180228060605) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20180227234521) do
     t.boolean "human"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "eye_color"
   end
 
 end

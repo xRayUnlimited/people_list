@@ -1,0 +1,34 @@
+<h2>Edit Entry</h2>
+<%= render 'layouts/navbar' %>
+<%= yield %>
+<hr>
+
+<div>
+  <%= form_for @person do |f| %>
+
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+    <br>
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+    <br>
+    <%= f.label :eye_color %>
+    <%= f.text_field :eye_color %>
+    <br>
+    <%= f.label :age %>
+    <%= f.text_field :age %>
+    <br>
+    <%= f.check_box :human %>
+    <%= f.label :human %>
+    <br>
+    <div>
+      <%= f.submit %>
+    </div>
+
+  <% end %>
+</div>
+<br>
+<hr>
+<div>
+  <h4><%= button_to "Back", people_path, :method => "get" %></h4>
+</div>

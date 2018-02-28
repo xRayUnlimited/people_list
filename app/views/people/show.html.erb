@@ -1,0 +1,13 @@
+<%= render 'layouts/navbar' %>
+<%= yield %>
+<hr>
+<div><h5>Name:</h5>
+  <h4><%= @person.first_name + " " + @person.last_name %></h4>
+  <h5>Age:</h5><h4><%= @person.age %></h4>
+  <h5>Eye Color: </h5><h4><%= @person.eye_color %></h4>
+  <h5>Are they human?</h5><h4><%= @person.human %></h4>
+</div>
+<hr>
+<div>
+<%= button_to "Back", people_path, :method => "get" %>
+</div>

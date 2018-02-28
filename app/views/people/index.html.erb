@@ -1,0 +1,17 @@
+<h1>People</h1>
+<%= render 'layouts/navbar' %>
+<%= yield %>
+
+<div>
+  <h3><%= button_to 'Add New Person', new_person_path, :method => "get" %></h3>
+</div>
+
+<div>
+    <% @people.each do |person| %>
+    <%= person.first_name %>  <br>  <%= person.last_name %></span>
+    <%= link_to 'View', person_path(person) %>
+    <%= link_to 'Edit', edit_person_path(person) %>
+    <%= link_to 'Delete', person, method: :delete %>
+
+  <% end %>
+</div>
